@@ -1,18 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/photo_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/photo_height"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:contentDescription="@string/author_photo_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hero_photo" />
+
+        <ImageView
+            android:id="@+id/point_pic"
+            android:layout_width="@dimen/pic_size"
+            android:layout_height="@dimen/pic_size"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/photo_view"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_marginStart="@dimen/margin_left"
+            android:contentDescription="@string/author_photo_desc"
+            android:src="@drawable/ic_point" />
+
+        <TextView
+            android:id="@+id/occupation_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pic_size"
+            android:layout_alignBottom="@+id/point_pic"
+            android:layout_marginEnd="@dimen/margin_common"
+            android:layout_marginStart="@dimen/text_margin_side"
+            android:layout_toEndOf="@+id/point_pic"
+            android:gravity="center_vertical"
+            android:text="@string/occupation"
+            android:textSize="@dimen/text_size" />
+
+        <ImageView
+            android:id="@+id/au_pic"
+            android:layout_width="@dimen/pic_size"
+            android:layout_height="@dimen/pic_size"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/point_pic"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_marginStart="@dimen/margin_left"
+            android:contentDescription="@string/author_photo_desc"
+            android:src="@drawable/ic_au" />
+
+        <TextView
+            android:id="@+id/au_speaker_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pic_size"
+            android:layout_alignBottom="@+id/au_pic"
+            android:layout_alignEnd="@+id/occupation_text"
+            android:layout_marginStart="@dimen/text_margin_side"
+            android:layout_toEndOf="@+id/au_pic"
+            android:gravity="center_vertical"
+            android:text="@string/au_speaker_2018"
+            android:textSize="@dimen/text_size" />
+
+        <View
+            android:id="@+id/occupation_splitter"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignEnd="@+id/occupation_text"
+            android:layout_alignStart="@+id/point_pic"
+            android:layout_below="@+id/au_pic"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:background="@android:color/holo_red_light" />
+
+        <TextView
+            android:id="@+id/about_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/occupation_text"
+            android:layout_alignStart="@+id/point_pic"
+            android:layout_below="@+id/occupation_splitter"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:text="@string/about_hero"
+            android:textSize="@dimen/text_size" />
+
+        <View
+            android:id="@+id/about_splitter"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignEnd="@+id/occupation_text"
+            android:layout_alignStart="@+id/point_pic"
+            android:layout_below="@+id/about_text"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:background="@android:color/holo_red_light" />
+
+        <EditText
+            android:id="@+id/message_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/occupation_text"
+            android:layout_alignStart="@+id/point_pic"
+            android:layout_below="@+id/about_splitter"
+            android:hint="@string/enter_your_message"
+            android:inputType="text"
+            android:maxHeight="@dimen/max_input_height" />
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignEnd="@+id/occupation_text"
+            android:layout_alignStart="@+id/point_pic"
+            android:layout_below="@+id/message_input"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:background="@android:color/transparent"
+            android:text="@string/send_message"
+            android:textColor="@android:color/holo_red_light" />
+
+        <Button
+            android:id="@+id/facebook_button"
+            android:layout_width="@dimen/pic_size"
+            android:layout_height="@dimen/pic_size"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/send_button"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/margin_common"
+            android:background="@drawable/ic_facebook"
+            />
+
+        <Button
+            android:id="@+id/vk_button"
+            android:layout_width="@dimen/pic_size"
+            android:layout_height="@dimen/pic_size"
+            android:layout_centerHorizontal="true"
+            android:layout_toStartOf="@+id/facebook_button"
+            android:layout_below="@+id/send_button"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/margin_common"
+            android:background="@drawable/ic_vk"
+            />
+
+        <Button
+            android:id="@+id/github_button"
+            android:layout_width="@dimen/pic_size"
+            android:layout_height="@dimen/pic_size"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@+id/facebook_button"
+            android:layout_below="@+id/send_button"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/margin_common"
+            android:background="@drawable/ic_github_face"
+            />
+
+        <TextView
+            android:id="@+id/disclaimer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/facebook_button"
+            android:layout_margin="@dimen/margin_common"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_centerHorizontal="true"
+            android:text="@string/disclaimer"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+</ScrollView>
+
