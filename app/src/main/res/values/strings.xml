@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Maxim Shatalov</string>
+    <string name="app_name" translatable="false">NY Times</string>
     <string name="author_photo_desc">Author Photo</string>
     <string name="occupation">Senior Software Engineer at POINT</string>
     <string name="au_speaker_2018">AU Speaker 2018</string>
     <string name="about_hero">Maxim is engaged in software development, starting from 2015. The main activity is the development of applied programs for the manufacturing industry. He is responsible for the full development cycle, including UX/UI design, front-end and back-end development.</string>
-    <string name="enter_your_message">Enter your message…</string>
+    <string name="enter_your_message">Write me a letter…</string>
     <string name="send_message">Send message</string>
     <string name="disclaimer" translatable="false">© 2018 Maxim Shatalov</string>
     <string name="hero_email" translatable="false">shatalov04@gmail.com</string>
@@ -14,4 +14,5 @@
     <string name="error_no_browser_app">No Browser apps were found!</string>
     <string name="vk_url" translatable="false">https://vk.com/id224269077</string>
     <string name="github_url" translatable="false">https://github.com/furzeal</string>
+    <string name="about_author">About author</string>
 </resources>

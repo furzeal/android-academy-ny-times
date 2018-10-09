@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">Максим Шаталов</string>
     <string name="author_photo_desc">Фотография</string>
     <string name="occupation">Ведущий инженер-программист компании ПОИНТ</string>
     <string name="au_speaker_2018">Докладчик AU Russia 2018</string>
     <string name="about_hero">Максим разрабатывает программное обеспечение, начиная с 2015 года. Основное направление - разработка прикладных программ для машиностроительной отрасли. Он отвечает за полный цикл разработки, ключая UX/UI, front-end и back-end разработку.</string>
-    <string name="enter_your_message">Введите ваше сообщение…</string>
+    <string name="enter_your_message">Напишите мне письмо…</string>
     <string name="send_message">Отправить</string>
     <string name="email_subject">Письмо от Android</string>
     <string name="error_no_email_app">Почтовый клиент не обнаружен!</string>
@@ -12,4 +11,6 @@
     <string name="error_no_browser_app">Браузер не обнаружен!</string>
     <string name="vk_url">https://vk.com/id224269077</string>
     <string name="github_url">https://github.com/furzeal</string>
+    <string name="about_author">Об авторе</string>
+
 </resources>
